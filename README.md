@@ -1,43 +1,36 @@
 # 🌌 FAKKAF.COM - DIGITAL SANCTUARY
+> **"Over it are Nineteen." (Müddessir, 30)**
 
-> **"Üzerinde On Dokuz Vardır." (Müddessir, 30)**
+![Galaxy Sanctuary Preview](docs/assets/galaxy_sanctuary_preview.png)
 
-**FAKKAF.COM**, siber güvenlik uzmanlığı ile mistik bir derinliğin (19 Kodu) kesişim noktasıdır. Bu proje, sadece bir kişisel web sitesi değil, bir **Universal Operating System (Evrensel İşletim Sistemi)** arayüzüdür. Kullanıcıyı derin uzayda ruhsal ve teknik bir yolculuğa çıkarır.
+## 🌠 The Vision: A Universal Operating System
+**FAKKAF.COM**, siber güvenliğin soğuk algoritması ile mistik bir derinliğin (19 Kodu) kesiştiği noktada doğan bir **Evrensel İşletim Sistemi** (Universal OS) arayüzüdür. Burası bir web sitesi değil; derin uzayda ruhsal ve teknik bir arınma noktası, dijital bir sığınaktır.
 
----
-
-## 🌟 Visual Soul & Architecture
-
-- **The Source:** Altın oranlı 12 yüzlü (Dodecahedron) merkez nesne, 19 algoritmasını shader'lar üzerinden yansıtır.
-- **Universal HUD:** Canlı sistem metrikleri, entropi görselleştirmesi ve siber güvenlik sığınak verileri.
-- **Audio Sanctuary:** 432Hz binaural vuruşlarla tasarlanmış, zihinsel bir dinlenme frekansı.
-- **Nebula Interface:** İmleç hareketine duyarlı, GLSL shader tabanlı akışkan arka plan.
-
-## 🛡️ Secure by Design (SbD)
-
-- **Node 20 / Nginx Alpine:** Hafif, hızlı ve güvenli konteynerizasyon.
-- **Hardened Nginx:** CSP, HSTS ve optimize edilmiş güvenlik başlıkları.
-- **Rate Limiting Simulation:** UI seviyesinde brute-force ve DDoS koruma simülasyonu.
-- **Non-privileged Execution:** Tüm süreçler düşük yetkili kullanıcılarla çalıştırılır.
-
-## 🛠️ Tech Stack
-
-- **Frontend:** React + Vite (Deneysel Rolldown)
-- **3D:** Three.js / R3F / Drei
-- **Logic:** Zustand / Framer Motion
-- **Styling:** Tailwind CSS v4
-
-## 🚀 Deployment
-
-Sistem, Ubuntu 24.04 (VPS) üzerinde Docker orkestrasyonu ile HA (High Availability) standartlarında çalışmaktadır.
-
-```bash
-# Sanctuary Sync Protocol
-./deploy.sh
-```
+### 🪐 The Celestial Interface
+- **The Source:** Altın oranlı 12 yüzlü (Dodecahedron) merkez nesne. 19 algoritmasını yansıtan shader katmanlarıyla evrenin çekirdeğini temsil eder.
+- **Orbital Navigation:** İmleç etkileşimiyle duran, kullanıcıya odaklanan akıllı navigasyon yörüngesi.
+- **Nebula Interface:** GLSL shader tabanlı, imleç hareketine duyarlı akışkan etherik arka plan.
+- **Audio Sanctuary:** Zihinsel berraklık için tasarlanmış 432Hz binaural vuruşlar.
 
 ---
 
-**Burak AKA** tarafından, "Secure by Design - Bound by Spirit" felsefesiyle mühürlenmiştir.
+## 🛡️ Secure by Design (The Architecture of the Void)
+Sığınak, sadece görsel değil, mimari olarak da sarsılmaz bir temel üzerine inşa edilmiştir:
 
-*© 2026 Fakkaf Sanctuary*
+- **Encrypted Data Flow:** HUD üzerinde akan canlı sistem metrikleri ve entropi görselleştirmeleri.
+- **Protective Simulations:** UI seviyesinde çalışan gerçek zamanlı Rate Limiter ve Brute-Force koruma simülasyonları.
+- **Hardened Presence:** Docker orkestrasyonu, Nginx güvenlik mühürleri ve düşük yetkili süreç yönetimi (Non-privileged execution).
+
+---
+
+## 🛠️ Cosmic Tech Stack
+- **Engine:** React + Vite (Experimental Rolldown Support)
+- **Dimension:** Three.js / R3F / Drei
+- **Vitality:** Zustand / Framer Motion
+- **Design System:** Tailwind CSS v4
+
+---
+
+📧 **Contact the Architect:** [basvuru@fakkaf.com](mailto:basvuru@fakkaf.com)
+
+*© 2026 Fakkaf Sanctuary - "Secure by Design - Bound by Spirit"*

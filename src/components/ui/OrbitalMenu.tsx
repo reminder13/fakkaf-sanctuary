@@ -9,11 +9,13 @@ interface NavNodeProps {
     angle: number
     radius: number
     color: string
+    rotationTime: number
 }
 
-const NavNode = ({ label, angle, radius, color }: NavNodeProps) => {
+const NavNode = ({ label, angle, radius, color, rotationTime }: NavNodeProps) => {
     const meshRef = useRef<THREE.Group>(null!)
     const [hovered, setHovered] = useState(false)
+    const setOrbitPaused = useSystemStore((state) => state.setOrbitPaused)
     const setActiveNode = useSystemStore((state) => state.setActiveNode)
     const setMatrixActive = useSystemStore((state) => state.setMatrixActive)
     const setVaultActive = useSystemStore((state) => state.setVaultActive)
@@ -24,20 +26,24 @@ const NavNode = ({ label, angle, radius, color }: NavNodeProps) => {
         if (label === 'About') setVaultActive(true)
     }
 
-    useFrame((state) => {
-        const t = state.clock.getElapsedTime() * 0.2
-        const currentAngle = angle + t
+    const handleHover = (isHovered: boolean) => {
+        setHovered(isHovered)
+        setOrbitPaused(isHovered)
+    }
+
+    useFrame(() => {
+        const currentAngle = angle + rotationTime
         meshRef.current.position.x = Math.cos(currentAngle) * radius
         meshRef.current.position.z = Math.sin(currentAngle) * radius
-        meshRef.current.position.y = Math.sin(t * 2 + angle) * 0.5
+        meshRef.current.position.y = Math.sin(rotationTime * 2 + angle) * 0.5
     })
 
     return (
         <group ref={meshRef}>
             <mesh
                 onClick={handleNodeClick}
-                onPointerOver={() => setHovered(true)}
-                onPointerOut={() => setHovered(false)}
+                onPointerOver={() => handleHover(true)}
+                onPointerOut={() => handleHover(false)}
             >
                 <sphereGeometry args={[0.2, 32, 32]} />
                 <meshStandardMaterial
@@ -51,7 +57,6 @@ const NavNode = ({ label, angle, radius, color }: NavNodeProps) => {
                 position={[0, 0.5, 0]}
                 fontSize={0.15}
                 color="white"
-                font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_eeA.woff"
                 fillOpacity={hovered ? 1 : 0.4}
             >
                 {label.toUpperCase()}
@@ -70,12 +75,23 @@ const NavNode = ({ label, angle, radius, color }: NavNodeProps) => {
 }
 
 export const OrbitalMenu = () => {
+    const isOrbitPaused = useSystemStore((state) => state.isOrbitPaused)
+    const rotationTimeRef = useRef(0)
+    const [rotationTime, setRotationTime] = useState(0)
+
     const nodes = [
         { label: 'Wisdom', color: '#ffd700', radius: 4 },
         { label: 'Systems', color: '#00f2ff', radius: 4.5 },
         { label: 'Security', color: '#00f2ff', radius: 5 },
         { label: 'About', color: '#ffd700', radius: 5.5 },
     ]
+
+    useFrame((_, delta) => {
+        if (!isOrbitPaused) {
+            rotationTimeRef.current += delta * 0.2
+            setRotationTime(rotationTimeRef.current)
+        }
+    })
 
     return (
         <group>
@@ -86,6 +102,7 @@ export const OrbitalMenu = () => {
                     color={node.color}
                     radius={node.radius}
                     angle={(i / nodes.length) * Math.PI * 2}
+                    rotationTime={rotationTime}
                 />
             ))}
 

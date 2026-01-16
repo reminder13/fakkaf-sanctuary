@@ -5,6 +5,7 @@ interface SystemState {
     isAudioActive: boolean
     isMatrixActive: boolean
     isVaultActive: boolean
+    isOrbitPaused: boolean
     latency: number
     throughput: number
 
@@ -12,6 +13,7 @@ interface SystemState {
     toggleAudio: () => void
     setMatrixActive: (active: boolean) => void
     setVaultActive: (active: boolean) => void
+    setOrbitPaused: (paused: boolean) => void
     updateMetrics: () => void
 }
 
@@ -20,6 +22,7 @@ export const useSystemStore = create<SystemState>((set) => ({
     isAudioActive: false,
     isMatrixActive: false,
     isVaultActive: false,
+    isOrbitPaused: false,
     latency: 19,
     throughput: 0,
 
@@ -27,6 +30,7 @@ export const useSystemStore = create<SystemState>((set) => ({
     toggleAudio: () => set((state) => ({ isAudioActive: !state.isAudioActive })),
     setMatrixActive: (active) => set({ isMatrixActive: active }),
     setVaultActive: (active) => set({ isVaultActive: active }),
+    setOrbitPaused: (paused) => set({ isOrbitPaused: paused }),
     updateMetrics: () => set({
         latency: Math.floor(Math.random() * 19) + 5,
         throughput: Math.floor(Math.random() * 1000)

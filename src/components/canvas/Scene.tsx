@@ -14,17 +14,23 @@ export const Scene = () => {
         <div className="fixed inset-0 w-full h-full bg-space-deep overflow-hidden">
             <Canvas shadows dpr={[1, 2]}>
                 <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={45} />
+                <Environment preset="night" />
 
                 <Suspense fallback={null}>
                     <Nebula />
-                    <Source />
-                    <OrbitalMenu />
-                    <Environment preset="night" />
-
-                    <ambientLight intensity={0.1} />
-                    <pointLight position={[10, 10, 10]} intensity={2} color="#ffd700" />
-                    <pointLight position={[-10, -10, -10]} intensity={1.5} color="#00f2ff" />
                 </Suspense>
+
+                <Suspense fallback={null}>
+                    <Source />
+                </Suspense>
+
+                <Suspense fallback={null}>
+                    <OrbitalMenu />
+                </Suspense>
+
+                <ambientLight intensity={0.1} />
+                <pointLight position={[10, 10, 10]} intensity={2} color="#ffd700" />
+                <pointLight position={[-10, -10, -10]} intensity={1.5} color="#00f2ff" />
             </Canvas>
 
             {/* Heads-Up Display Layer */}

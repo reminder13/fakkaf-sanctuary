@@ -7,7 +7,7 @@ Bu belge, **FAKKAF.COM - Digital Sanctuary** projesinde görev alacak tüm AI as
 ## 👽 1. PROJE KİMLİĞİ VE VİZYONU
 - **Proje Adı:** FAKKAF.COM - Digital Sanctuary
 - **Mimar:** Ahmet Burak AKA (Senior System Architect & Cybersecurity Specialist)
-- **Kök Tarih:** 19.06.2002
+- **İletişim:** basvuru@fakkaf.com
 - **Temel Felsefe:** "Secure by Design" (SbD), "High Availability" (HA) ve "Mistisizm" (Müddessir/19 Algoritması).
 - **Vizyon:** Kullanıcının bir web sitesine değil, evrensel bir işletim sistemine (**Universal OS**) girdiğini hissetmesini sağlamak. Bu, dijital bir "unplugging" ve spiritüel bir sığınak deneyimidir.
 
@@ -33,6 +33,7 @@ Tüm geliştirmelerde bu estetik kuralları uygula:
    - `cyber-blue`: #00f2ff (Sistem akışı)
    - `gold`: #ffd700 (Kutsal ışık / 19. Kod)
 4. **432Hz Sound:** Ses motoru her zaman binaural vuruşlar üretmeli ve kullanıcı etkileşimiyle "fade-in" olmalıdır.
+5. **Orbital Interaction:** Navigasyon düğmeleri (Wisdom, Systems vb.) üzerine gelindiğinde tüm yörünge sistemi tam duruş (complete stop) pozisyonuna geçmelidir. İmleç çekildiğinde akış kaldığı yerden devam etmelidir.
 
 ---
 

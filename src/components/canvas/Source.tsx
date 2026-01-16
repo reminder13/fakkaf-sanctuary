@@ -67,7 +67,8 @@ export const Source = () => {
                 position={[0, 2.5, 0]}
                 fontSize={0.2}
                 color="#ffd700"
-                font="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_eeA.woff"
+                anchorX="center"
+                anchorY="middle"
             >
                 OVER IT ARE NINETEEN
             </Text>

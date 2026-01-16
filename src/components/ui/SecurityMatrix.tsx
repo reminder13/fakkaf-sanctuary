@@ -26,14 +26,14 @@ export const SecurityMatrix = () => {
                 initial={{ opacity: 0, scale: 0.9, backdropFilter: 'blur(0px)' }}
                 animate={{ opacity: 1, scale: 1, backdropFilter: 'blur(20px)' }}
                 exit={{ opacity: 0, scale: 0.9, backdropFilter: 'blur(0px)' }}
-                className="fixed inset-0 z-[200] flex items-center justify-center p-10 bg-space-deep/40"
+                className="fixed inset-0 z-[200] flex items-center justify-center p-4 sm:p-10 bg-space-deep/40 overflow-y-auto"
             >
-                <div className="relative w-full max-w-5xl h-[70vh] border border-cyber-blue/30 bg-black/80 shadow-[0_0_50px_rgba(0,242,255,0.1)] flex flex-col">
+                <div className="relative w-full max-w-5xl min-h-[50vh] max-h-[90vh] border border-cyber-blue/30 bg-black/80 shadow-[0_0_50px_rgba(0,242,255,0.1)] flex flex-col overflow-hidden">
                     {/* Header */}
-                    <div className="flex justify-between items-center p-4 border-b border-cyber-blue/20 bg-cyber-blue/5">
+                    <div className="flex justify-between items-center p-3 sm:p-4 border-b border-cyber-blue/20 bg-cyber-blue/5">
                         <div className="flex items-center gap-3">
-                            <ShieldAlert className="text-cyber-blue w-5 h-5 animate-pulse" />
-                            <span className="font-mono text-sm tracking-[0.3em] font-bold text-cyber-blue uppercase">Cyber-Security Matrix // SbD_v1.9</span>
+                            <ShieldAlert className="text-cyber-blue w-4 h-4 sm:w-5 h-5 animate-pulse" />
+                            <span className="font-mono text-[10px] sm:text-sm tracking-widest font-bold text-cyber-blue uppercase">Security Matrix // v1.9</span>
                         </div>
                         <button onClick={() => setMatrixActive(false)} className="hover:rotate-90 transition-transform duration-300">
                             <X className="text-white/60 hover:text-white w-5 h-5" />
@@ -41,9 +41,9 @@ export const SecurityMatrix = () => {
                     </div>
 
                     {/* Grid Content */}
-                    <div className="flex-1 grid grid-cols-3 gap-1 overflow-hidden">
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-1 overflow-y-auto">
                         {/* Column 1: Metrics */}
-                        <div className="border-r border-white/5 p-6 flex flex-col gap-8">
+                        <div className="border-b md:border-b-0 md:border-r border-white/5 p-4 sm:p-6 flex flex-col gap-6">
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center font-mono text-[10px]">
                                     <span className="text-white/40 uppercase">Latency (MS)</span>
