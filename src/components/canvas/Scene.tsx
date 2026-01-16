@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import { PerspectiveCamera, Environment } from '@react-three/drei'
+import * as THREE from 'three'
 import { Source } from './Source'
 import { Nebula } from './Nebula'
 import { HUD } from '../ui/HUD'
@@ -8,6 +9,7 @@ import { OrbitalMenu } from '../ui/OrbitalMenu'
 import { AudioEngine } from '../audio/AudioEngine'
 import { SecurityMatrix } from '../ui/SecurityMatrix'
 import { IdentityVault } from '../ui/IdentityVault'
+import { EffectComposer, Bloom, Noise, Vignette, ChromaticAberration } from '@react-three/postprocessing'
 
 export const Scene = () => {
     return (
@@ -28,9 +30,21 @@ export const Scene = () => {
                     <OrbitalMenu />
                 </Suspense>
 
-                <ambientLight intensity={0.1} />
-                <pointLight position={[10, 10, 10]} intensity={2} color="#ffd700" />
-                <pointLight position={[-10, -10, -10]} intensity={1.5} color="#00f2ff" />
+                <EffectComposer>
+                    <Bloom
+                        intensity={1.5}
+                        luminanceThreshold={0.2}
+                        luminanceSmoothing={0.9}
+                        mipmapBlur
+                    />
+                    <ChromaticAberration offset={new THREE.Vector2(0.001, 0.001)} />
+                    <Noise opacity={0.03} />
+                    <Vignette eskil={false} offset={0.1} darkness={1.1} />
+                </EffectComposer>
+
+                <ambientLight intensity={0.2} />
+                <pointLight position={[10, 10, 10]} intensity={5} color="#ffd700" />
+                <pointLight position={[-10, -10, -10]} intensity={3} color="#00f2ff" />
             </Canvas>
 
             {/* Heads-Up Display Layer */}

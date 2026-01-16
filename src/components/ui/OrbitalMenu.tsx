@@ -45,11 +45,11 @@ const NavNode = ({ label, angle, radius, color, rotationTime }: NavNodeProps) =>
                 onPointerOver={() => handleHover(true)}
                 onPointerOut={() => handleHover(false)}
             >
-                <sphereGeometry args={[0.2, 32, 32]} />
+                <icosahedronGeometry args={[0.2, 0]} />
                 <meshStandardMaterial
                     color={hovered ? '#ffd700' : color}
                     emissive={color}
-                    emissiveIntensity={hovered ? 2 : 0.5}
+                    emissiveIntensity={hovered ? 5 : 1}
                 />
             </mesh>
 

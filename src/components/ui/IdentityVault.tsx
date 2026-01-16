@@ -33,9 +33,9 @@ export const IdentityVault = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
-                            className="inline-block px-4 py-1 border border-gold/20 text-gold font-mono text-[8px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-4"
+                            className="inline-block px-4 py-1 border border-gold/40 bg-gold/5 text-gold font-mono text-[8px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.5em] uppercase mb-4 shadow-[0_0_15px_rgba(255,215,0,0.1)]"
                         >
-                            Identity De-encryption Status: Finalized
+                            Divine Identity Protocol: Synchronized
                         </motion.div>
                         <h2 className="text-2xl sm:text-4xl font-bold tracking-tighter text-white uppercase italic">
                             Burak <span className="text-gold">AKA</span>

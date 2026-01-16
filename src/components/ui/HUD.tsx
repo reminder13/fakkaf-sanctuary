@@ -24,26 +24,26 @@ export const HUD = () => {
             {/* Top Section - Responsive Flex */}
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4 animate-in fade-in slide-in-from-top duration-1000">
                 <div className="flex gap-4">
-                    <div className="p-2 border border-cyber-blue/20 bg-space-deep/40 backdrop-blur-md shrink-0">
-                        <ShieldCheck className="w-5 h-5 text-cyber-blue animate-pulse" />
+                    <div className="p-2 border border-gold/40 bg-space-deep/60 backdrop-blur-xl shrink-0 shadow-[0_0_15px_rgba(255,215,0,0.2)]">
+                        <ShieldCheck className="w-5 h-5 text-gold animate-pulse" />
                     </div>
-                    <div className="font-mono text-[9px] sm:text-[10px] tracking-widest uppercase flex flex-col">
-                        <span className="text-cyber-blue font-bold">System Status: Secure</span>
-                        <span className="text-white/60">AuthID: A. BURAK AKA</span>
-                        <span className="text-white/40">Protocol: MUDDESSIR_19</span>
+                    <div className="font-mono text-[9px] sm:text-[10px] tracking-widest uppercase flex flex-col bg-space-deep/40 backdrop-blur-md p-2 border-l border-gold/30">
+                        <span className="text-gold font-bold">System Status: Divine</span>
+                        <span className="text-white/80">AuthID: A. BURAK AKA</span>
+                        <span className="text-white/60">Protocol: MUDDESSIR_19</span>
                     </div>
                 </div>
 
-                <div className="flex flex-col items-start sm:items-end font-mono text-[9px] sm:text-[10px] tracking-widest w-full sm:w-auto">
+                <div className="flex flex-col items-start sm:items-end font-mono text-[9px] sm:text-[10px] tracking-widest w-full sm:w-auto bg-space-deep/40 backdrop-blur-md p-2 border-r border-cyber-blue/30">
                     <div className="flex items-center gap-2 text-gold">
                         <Activity className="w-3 h-3" />
                         <span>LATENCY: {latency}MS</span>
                     </div>
                     <div className="flex items-center gap-2 text-cyber-blue mt-1">
-                        <span className="opacity-40 uppercase">THROUGHPUT:</span>
-                        <span>{throughput} KB/S</span>
+                        <span className="opacity-60 uppercase font-bold text-cyber-blue/80">THROUGHPUT:</span>
+                        <span className="text-white/80">{throughput} KB/S</span>
                     </div>
-                    <div className="text-white/60 mt-2 font-mono uppercase">[ ACCESS: GRANTED ]</div>
+                    <div className="text-gold/60 mt-2 font-mono uppercase tracking-[0.2em]">[ ACCESS: DIVINE ]</div>
                 </div>
             </div>
 
